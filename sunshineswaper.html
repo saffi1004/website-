@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sunshine</title>
+    </head>
+<body>
+    <img src="labronormal.png.webp" id = "labron"> 
+    <button onclick="Sunshine()">You are my sunshine?</button>   
+</body>
+
+    <script>
+
+        function Sunshine() {
+            const imgTag = document.getElementById('labron');
+            const imgsrc = imgTag.src;
+
+
+            if (imgsrc.includes('normal')) {
+                imgTag.src = 'sunshine.png'; 
+            } else {
+                imgTag.src = 'labronormal.png.webp';
+            }
+        }
+    </script>
+
+
+
+
+
+</html>

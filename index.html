@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+    .con {
+        min-width: 90vh;
+        min-height: 85vh;
+        margin: 10px;
+        background-color: beige;
+        padding: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }  
+    
+    .ball {
+        position:absolute;
+        top: 100px;
+        width: 60px; 
+        height: 60px; 
+        font-size: 24px; 
+    }
+
+    #counter {
+        font-size: 24px; 
+    }
+    #aura {
+        font-size: 24px;
+
+    }
+
+</style>
+
+<body>
+    <p id="aura">Aura:</p>
+    <p id="counter">0</p>
+    <div class="con">
+        <button onclick="start()" id="ball" class="ball">+1</button>
+    </div>
+</body>
+
+<script>
+
+const maxheight = window.innerHeight - 100;
+const maxwidth = window.innerWidth - 100;
+
+let clickCounter = 0;
+
+function start() {
+    const ball = document.getElementById("ball");
+    const counterDisplay = document.getElementById("counter");
+    const randomTopPosition = Math.floor(Math.random() * maxheight);
+    const randomLeftPosition = Math.floor(Math.random() * maxwidth);
+
+    ball.style.top = randomTopPosition + 'px';
+    ball.style.left = randomLeftPosition + 'px';
+
+    
+    clickCounter++;
+    counterDisplay.innerText = clickCounter;
+}
+</script>
+
+
+
+</html>

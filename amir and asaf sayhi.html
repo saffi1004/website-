@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    
+<label for="usernameinput">please name</label>
+<input type="text" id="usernameinput">
+<button onclick="sayhi()" >name</button>
+<h3 id="h3name" >?</h3>
+
+<a href="https://www.youtube.com/watch?v=su2TBgZNRK8">link</a>
+
+</body>
+
+<script>
+        function sayhi () {
+        const name = document.getElementById("usernameinput").value;
+        const h3name = document.getElementById("h3name");
+        h3name.innerHTML = "Hi " + name + "! :)";
+
+        }
+
+
+
+</script>
+
+</html>
